@@ -7,7 +7,7 @@
 - (void)initialize
 {
     // your code here
-    - (void)update:(CCTime)delta
+    -(void)update:(CCTime)delta
     {
     
     // this will be run every frame.
