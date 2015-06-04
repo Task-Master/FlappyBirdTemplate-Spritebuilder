@@ -13,7 +13,6 @@
 {
     CGPoint _ratio;
     CGPoint _offset;
-    \
     CCNode *__unsafe_unretained _child; // weak reference
 }
 
