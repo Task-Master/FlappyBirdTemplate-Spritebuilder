@@ -222,7 +222,7 @@
             {
                 if (child.child == cloud)
                 {
-                    child.offset = ccp(child.offset.x + 2*cloud.contentSize.width, child.offset.y);
+                    child.offset = ccp(child.offset.x + 2 * cloud.contentSize.width, child.offset.y);
                 }
             }
         }
