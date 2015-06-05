@@ -166,12 +166,12 @@
 
 - (void)update:(CCTime)delta
 {
-    /* _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y); */
+    _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y);
     
     // Loop the bushes
     for (CCNode *bush in _bushes)
     {
-        // Move the bush
+        /* // Move the bush
         bush.position = ccp(bush.position.x - (character.physicsBody.velocity.x * delta), bush.position.y);
         
         // If the left corner is one complete width off the screen,
@@ -179,8 +179,8 @@
         if (bush.position.x <= (-1 * bush.contentSize.width))
         {
             bush.position = ccp(bush.position.x + 2 * bush.contentSize.width, bush.position.y);
-        }
-        /* // Get the world position of the bush
+        } */
+        // Get the world position of the bush
         CGPoint bushWorldPosition = [_parallaxBackground convertToWorldSpace:bush.position];
         CGPoint bushScreenPosition = [self convertToNodeSpace:bushWorldPosition];
         // If the left corner is one complete width off the screen,
@@ -194,13 +194,13 @@
                     child.offset = ccp(child.offset.x + 2 * bush.contentSize.width, child.offset.y);
                 }
             }
-        } */
+        }
     }
     
     // Loop the clouds
     for (CCNode *cloud in _clouds)
     {
-        // Move the cloud
+        /* // Move the cloud
         cloud.position = ccp(cloud.position.x - (character.physicsBody.velocity.x * delta), cloud.position.y);
         
         // If the left corner is one complete width off the screen,
@@ -208,8 +208,8 @@
         if (cloud.position.x <= (-1 * cloud.contentSize.width))
         {
             cloud.position = ccp(cloud.position.x + 2 * cloud.contentSize.width, cloud.position.y);
-        }
-        /* // Get the world position of the cloud
+        } */
+        // Get the world position of the cloud
         CGPoint cloudWorldPosition = [_parallaxBackground convertToWorldSpace:cloud.position];
         // Get the screen position of the cloud
         CGPoint cloudScreenPosition = [self convertToNodeSpace:cloudWorldPosition];
@@ -224,7 +224,7 @@
                     child.offset = ccp(child.offset.x + 2 * cloud.contentSize.width, child.offset.y);
                 }
             }
-        } */
+        }
     }
     _sinceTouch += delta;
     
