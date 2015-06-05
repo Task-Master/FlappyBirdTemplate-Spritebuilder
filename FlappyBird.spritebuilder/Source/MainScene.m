@@ -166,7 +166,7 @@
 
 - (void)update:(CCTime)delta
 {
-    _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y);
+    /* _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y); */
     
     // Loop the bushes
     for (CCNode *bush in _bushes)
