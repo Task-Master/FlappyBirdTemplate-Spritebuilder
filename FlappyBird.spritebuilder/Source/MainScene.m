@@ -191,7 +191,7 @@
             {
                 if (child.child == bush)
                 {
-                    child.offset = ccp(child.offset.x + 2*bush.contentSize.width, child.offset.y);
+                    child.offset = ccp(child.offset.x + 2 * bush.contentSize.width, child.offset.y);
                 }
             }
         }
